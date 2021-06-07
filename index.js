@@ -6,7 +6,7 @@ const fetch = require("node-fetch")
 
 const express = require("express")
 const app = express()
-const http = require("http")
+const axios = require("axios")
 app.get("/", (request, response) => {
   const ping = new Date();
   ping.setHours(ping.getHours() - 3);
@@ -15,7 +15,7 @@ app.get("/", (request, response) => {
 });
 app.listen(process.env.PORT || 3000, () => {
   setInterval(() => {
-    http.get('http://DivAutoMod.iiamfilippin.repl.co')
+    axios.get('https://DivAutoMod-2.iiamfilippi.repl.co')
   }, 25 * 60000)
 })
 
@@ -245,7 +245,7 @@ client.on('message', msg => {
 
 client.on('message', mes => {
 	let moderatorChannel = client.channels.cache.get(config.moderatorChannelID)
-	let canal = "656633621200764929"
+	let canal = ["656633621200764929"]
 	let discordInvites = [
 		'https://discord.gg/',
 		'https://discord.com/invite/',
@@ -394,7 +394,7 @@ client.on('messageUpdate', (oldMsg, newMsg) => {
 
 client.on('messageUpdate', (oldMsg, novaMsg) => {
 	let moderatorChannel = client.channels.cache.get(config.moderatorChannelID)
-	let canal = "656633621200764929"
+	let canal = ["656633621200764929"]
 	let discordInvites = [
 		'https://discord.gg/',
 		'https://discord.com/invite/',
